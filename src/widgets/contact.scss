@@ -1,0 +1,20 @@
+.ui-contact {
+
+  color: #3d464d;
+  font-weight: 400;
+  transition: color .2s ease;
+
+  &--mode_default {
+  }
+
+  &--mode_big {
+    font-size: 18px;
+    color: #3d464d;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+  }
+
+}

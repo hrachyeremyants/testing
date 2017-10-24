@@ -1,0 +1,165 @@
+.phone_widget {
+
+  user-select: none;
+
+  &__main {
+    width: 26rem;
+    height: 19rem;
+
+    &_section {
+      display: none;
+      height: 100%;
+
+      &_initial {
+
+      }
+
+      &_choose {
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+      }
+
+    }
+  }
+
+  &--mode_initial {
+    .phone_widget__main_section_initial {
+      display: flex;
+    }
+  }
+
+  &--mode_choose {
+    .phone_widget__main_section_choose {
+      display: flex;
+    }
+  }
+
+  &--call_start {
+    .phone_widget__dialing_call_btn {
+      background-color: #4897d8;
+      background-image: url( /images/loader.svg );
+      background-position: center;
+      background-repeat: no-repeat;
+      color: transparent;
+      cursor: initial;
+      &:hover {
+        color: transparent;
+      }
+    }
+  }
+
+  &__history {
+    flex: 0 50%;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &>p {
+      color: #3d464d;
+      font-size: 18px;
+      font-weight: 400;
+      flex: 0 auto;
+    }
+
+    &_item {
+      flex: 1;
+      padding-top: 1rem;
+      cursor: pointer;
+
+      &>time {
+        color: #b2c6cd;
+        font-size: 12px;
+        font-weight: 400;
+        padding-top: .2rem;
+      }
+
+      &:hover {
+        &>.ui-contact {
+          color: #4897d8;
+        }
+      }
+
+    }
+
+  }
+
+  &__dialing {
+
+    $border: 1px solid #e1eef3;
+
+    flex: 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &_field {
+      flex: 0 auto;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      padding: 1rem;
+      width: 100%;
+      border-left: $border;
+      text-align: center;
+    }
+
+    &>.ui-keypad {
+      flex: 1;
+
+      &>span {
+        border-top: $border;
+        border-left: $border;
+        border-right: none;
+        border-bottom: none;
+      }
+
+    }
+
+    &_call_btn {
+      flex: 0 auto;
+      border-top: $border;
+      border-left: $border;
+      text-align: center;
+      padding: 1rem;
+      color: #4897d8;
+      cursor: pointer;
+      transition: background-color .2s ease, color .2s ease;
+
+      &:hover {
+        background-color: #4897d8;
+        color: white;
+      }
+
+    }
+
+  }
+
+  &__choose {
+
+    align-items: center;
+    justify-content: space-around;
+
+    &>.ui-contact {
+      flex: 0 auto;
+      padding-top: 3rem;
+    }
+
+    &>p {
+      flex: 0 auto;
+      color: #3d464d;
+      padding: 1rem 0;
+      text-align: center;
+      &>b{
+        font-weight: 500;
+      }
+    }
+
+    &>.ui-button {
+      width: 12rem;
+      flex: 0 auto;
+    }
+
+  }
+
+}
